@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { X, Trash2, Mail, Phone, Building, User, MapPin, MessageSquare, Send, CheckCircle2 } from 'lucide-react';
 import type { Product } from './Catalog';
+import { getImageUrl } from './Catalog';
 import type { TranslationDict } from '../utils/translations';
 
 interface QuoteBuilderProps {
@@ -139,7 +140,7 @@ export const QuoteBuilder: React.FC<QuoteBuilderProps> = ({
                     >
                       <div className="flex items-center gap-3">
                         <img
-                          src={item.imagePath}
+                          src={getImageUrl(item.imagePath)}
                           alt={item.name}
                           className="w-10 h-10 rounded-lg object-cover"
                         />

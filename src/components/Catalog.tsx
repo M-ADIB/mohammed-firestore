@@ -23,6 +23,11 @@ interface CatalogProps {
   lang: 'en' | 'ar';
 }
 
+export const getImageUrl = (path: string) => {
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${import.meta.env.BASE_URL}${cleanPath}`;
+};
+
 export const Catalog: React.FC<CatalogProps> = ({ addToCart, cartIds, t, lang }) => {
   const [activeTab, setActiveTab] = useState('ALL');
   const [searchQuery, setSearchQuery] = useState('');
@@ -289,7 +294,7 @@ export const Catalog: React.FC<CatalogProps> = ({ addToCart, cartIds, t, lang })
                   {/* Photo Panel */}
                   <div className="h-56 relative overflow-hidden bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-center">
                     <img
-                      src={p.imagePath}
+                      src={getImageUrl(p.imagePath)}
                       alt={p.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
@@ -378,7 +383,7 @@ export const Catalog: React.FC<CatalogProps> = ({ addToCart, cartIds, t, lang })
               {/* Product Photo inside Modal */}
               <div className="w-full h-48 rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-950">
                 <img
-                  src={selectedProduct.imagePath}
+                  src={getImageUrl(selectedProduct.imagePath)}
                   alt={selectedProduct.name}
                   className="w-full h-full object-cover"
                 />

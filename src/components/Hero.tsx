@@ -14,7 +14,7 @@ export const Hero: React.FC<HeroProps> = ({ openCart, scrollToProducts, t }) => 
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/adiga_hero_bg.png"
+          src={`${import.meta.env.BASE_URL}adiga_hero_bg.png`}
           alt="ADIGA Fire &amp; Safety Warehouse"
           className="w-full h-full object-cover object-center scale-105"
         />
@@ -73,7 +73,7 @@ export const Hero: React.FC<HeroProps> = ({ openCart, scrollToProducts, t }) => 
         {/* Dynamic Badge Display */}
         <div className="lg:col-span-5 flex flex-col gap-4 text-left rtl:text-right">
           {/* Badge 1 */}
-          <div className="glass dark:bg-slate-900/40 border border-white/10 dark:border-slate-800/50 p-6 rounded-2xl flex items-start gap-4 hover:translate-x-2 rtl:hover:-translate-x-2 transition-transform duration-300 shadow-md">
+          <div className="bg-slate-900/60 backdrop-blur-md border border-white/15 p-6 rounded-2xl flex items-start gap-4 hover:translate-x-2 rtl:hover:-translate-x-2 transition-transform duration-300 shadow-md">
             <div className="w-12 h-12 bg-red-600/10 border border-red-500/20 text-red-500 rounded-xl flex items-center justify-center shrink-0">
               <ShieldCheck className="w-6 h-6" />
             </div>
@@ -84,7 +84,7 @@ export const Hero: React.FC<HeroProps> = ({ openCart, scrollToProducts, t }) => 
           </div>
 
           {/* Badge 2 */}
-          <div className="glass dark:bg-slate-900/40 border border-white/10 dark:border-slate-800/50 p-6 rounded-2xl flex items-start gap-4 hover:translate-x-2 rtl:hover:-translate-x-2 transition-transform duration-300 shadow-md">
+          <div className="bg-slate-900/60 backdrop-blur-md border border-white/15 p-6 rounded-2xl flex items-start gap-4 hover:translate-x-2 rtl:hover:-translate-x-2 transition-transform duration-300 shadow-md">
             <div className="w-12 h-12 bg-red-600/10 border border-red-500/20 text-red-500 rounded-xl flex items-center justify-center shrink-0">
               <Award className="w-6 h-6" />
             </div>
@@ -95,7 +95,7 @@ export const Hero: React.FC<HeroProps> = ({ openCart, scrollToProducts, t }) => 
           </div>
 
           {/* Badge 3 */}
-          <div className="glass dark:bg-slate-900/40 border border-white/10 dark:border-slate-800/50 p-6 rounded-2xl flex items-start gap-4 hover:translate-x-2 rtl:hover:-translate-x-2 transition-transform duration-300 shadow-md">
+          <div className="bg-slate-900/60 backdrop-blur-md border border-white/15 p-6 rounded-2xl flex items-start gap-4 hover:translate-x-2 rtl:hover:-translate-x-2 transition-transform duration-300 shadow-md">
             <div className="w-12 h-12 bg-red-600/10 border border-red-500/20 text-red-500 rounded-xl flex items-center justify-center shrink-0">
               <Flame className="w-6 h-6" />
             </div>
