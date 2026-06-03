@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ShieldAlert, Phone, Mail, Sun, Moon, ShoppingBag, Languages } from 'lucide-react';
+import { Menu, X, ShieldAlert, Sun, Moon, ShoppingBag, Languages } from 'lucide-react';
 import type { TranslationDict } from '../utils/translations';
 
 interface NavbarProps {
@@ -69,25 +69,11 @@ export const Navbar: React.FC<NavbarProps> = ({
   return (
     <>
       {/* Top Banner Info Bar */}
-      <div className="w-full bg-slate-900 text-slate-300 text-xs py-2 px-4 md:px-8 flex flex-col md:flex-row justify-between items-center gap-2 border-b border-slate-800 z-50 relative">
-        <div className="flex items-center gap-4 flex-wrap justify-center">
-          <span className="flex items-center gap-1.5">
-            <Phone className="w-3.5 h-3.5 text-red-500" />
-            <a href="tel:+971503033789" className="hover:text-red-400 transition-colors" dir="ltr">+971 50 303 3789</a>
-          </span>
-          <span className="flex items-center gap-1.5">
-            <Mail className="w-3.5 h-3.5 text-red-500" />
-            <a href="mailto:info@adigafire.com" className="hover:text-red-400 transition-colors">info@adigafire.com</a>
-          </span>
-          <span className="hidden md:inline-block text-slate-500">|</span>
-          <span>{t.monFriHours}</span>
-        </div>
-        <div className="flex items-center gap-3">
-          <span className="bg-red-500/10 text-red-400 border border-red-500/25 px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider animate-pulse">
-            {t.civilDefenseApproved}
-          </span>
-          <span className="text-slate-400 text-[11px]">{t.locationAjman}</span>
-        </div>
+      <div className="w-full bg-slate-950 text-slate-300 text-xs py-2.5 px-4 md:px-8 flex justify-center items-center border-b border-slate-900 z-50 relative">
+        <span className="bg-red-500/10 text-red-400 border border-red-500/25 px-3 py-1 rounded text-[10px] uppercase font-extrabold tracking-wider animate-pulse flex items-center gap-1.5">
+          <ShieldAlert className="w-3.5 h-3.5" />
+          {t.civilDefenseApproved}
+        </span>
       </div>
 
       {/* Main Navbar */}
